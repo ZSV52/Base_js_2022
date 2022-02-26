@@ -112,6 +112,6 @@
 
 // console.log(myNumber == myString);
 
-const myString = "vasya";
+// const myString = "vasya";
 
-console.log(myString.split(""));
+// console.log(myString.split(""));
