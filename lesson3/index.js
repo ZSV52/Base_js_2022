@@ -111,3 +111,7 @@
 // const myString = "1";
 
 // console.log(myNumber == myString);
+
+const myString = "vasya";
+
+console.log(myString.split(""));
