@@ -1,27 +1,29 @@
-console.log("HELLO JAVA SCRIPT");
+// Занятие 1
 
-const ourPlanetName = "Earth";
+// console.log("HELLO JAVA SCRIPT");
 
-console.log(ourPlanetName);
+// const ourPlanetName = "Earth";
 
-let currentUserTime = "22:54";
+// console.log(ourPlanetName);
 
-console.log(currentUserTime);
+// let currentUserTime = "22:54";
 
-let amountArticles = "10";
+// console.log(currentUserTime);
 
-console.log(amountArticles);
+// let amountArticles = "10";
 
-let firstName = "Mikhail";
+// console.log(amountArticles);
 
-console.log(firstName);
+// let firstName = "Mikhail";
 
-let surName = "Gusev";
+// console.log(firstName);
 
-console.log(surName);
+// let surName = "Gusev";
 
-const patroNymic = "Aleksandrovich";
+// console.log(surName);
 
-console.log(patroNymic);
+// const patroNymic = "Aleksandrovich";
 
-const isCash = "true";
+// console.log(patroNymic);
+
+// const isCash = "true";
