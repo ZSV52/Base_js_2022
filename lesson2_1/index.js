@@ -1,7 +1,9 @@
-console.log("HELLO JAVASCRIPT");
+// Занятие 2.1
 
-const myName = "Mikhail Gusev";
+// console.log("HELLO JAVASCRIPT");
 
-console.log(myName);
+// const myName = "Mikhail Gusev";
 
-console.log("Я запустил NODE JS");
+// console.log(myName);
+
+// console.log("Я запустил NODE JS");

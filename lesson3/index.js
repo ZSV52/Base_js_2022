@@ -177,10 +177,10 @@
 
 // 3. Високосный?
 
-const startYear = 1800;
-const endYear = 2020;
+// const startYear = 1800;
+// const endYear = 2020;
 
-let leapYearsAmount = 0;
+// let leapYearsAmount = 0;
 // const firstSpaceTripYear = 1961;
 
 // for (let counter = startYear; counter <= endYear; counter++) {
