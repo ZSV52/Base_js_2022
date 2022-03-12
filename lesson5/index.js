@@ -93,19 +93,63 @@
 
 // console.log(result);
 
-const myArray = [];
+// const myArray = [];
 
-const calcAverageValue = function (arr) {
-  if (!arr.length) {
-    return "Пустой массив";
-  }
-  let sum = 0;
+// const calcAverageValue = function (arr) {
+//   if (!arr.length) {
+//     return "Пустой массив";
+//   }
+//   let sum = 0;
 
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i];
+//   }
 
-  return sum / arr.length;
-};
+//   return sum / arr.length;
+// };
 
-console.log(calcAverageValue(myArray));
+// console.log(calcAverageValue(myArray));
+
+// Arrow functions
+
+// function calcValue(a, b) {
+//   const result = a + b;
+//   return result;
+// }
+
+// const calcValue = (a, b) => a + b;
+// то же самое, что:
+// const calcValue = (a, b) => {
+//   const result = a + b;
+//   return result;
+// };
+
+// const result = calcValue(3, 5);
+// console.log(result);
+
+//1
+// const msgsAmount = 5;
+// const message = "Сообщение";
+
+// const showMessage = (msg, count) => {
+//   for (let i = 1; i <= count; i++) {
+//     console.log(`${msg} ${i}`);
+//   }
+// };
+
+// showMessage(message, msgsAmount);
+
+//2
+
+// const myChar = "н";
+
+// const isMyCharVowel = (char) => {
+//   const vowels = "ауоыэяюёие";
+
+//   if (vowels.includes(char)) {
+//     return "Гласная!";
+//   }
+//   return "Не гласная!";
+// };
+
+// console.log(isMyCharVowel(myChar));
