@@ -64,7 +64,7 @@
 
 // const a = 3;
 
-// if (a === "test") {
+// if (a == "test") {
 //   console.log("Верно");
 // } else {
 //   console.log("Неверно");
@@ -83,3 +83,25 @@
 // Работа с логическими переменными
 
 // 1.
+
+// let test = false;
+
+// if (test == true) {
+//   console.log("Верно");
+// } else {
+//   console.log("Неверно");
+// }
+
+// test == true ? console.log("Верно") : console.log("Неверно");
+
+// 2.
+
+// let test = false;
+
+// if (test !== true) {
+//   console.log("Верно");
+// } else {
+//   console.log("Неверно");
+// }
+
+// test !== true ? console.log("Верно") : console.log("Неверно");

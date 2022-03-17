@@ -60,13 +60,13 @@
 //   age: 21,
 // };
 
-console.log(age, typeof age);
-console.log(userName, typeof userName);
-console.log(myVar1, typeof myVar1);
-console.log(myVar2, typeof myVar2);
-console.log(myVar3, typeof myVar3);
-console.log(myVar4, typeof myVar4);
-console.log(bigInt, typeof bigInt);
-console.log(user, typeof user);
-console.log(user.userName, typeof userName);
-console.log(user.age, typeof user.age);
+// console.log(age, typeof age);
+// console.log(userName, typeof userName);
+// console.log(myVar1, typeof myVar1);
+// console.log(myVar2, typeof myVar2);
+// console.log(myVar3, typeof myVar3);
+// console.log(myVar4, typeof myVar4);
+// console.log(bigInt, typeof bigInt);
+// console.log(user, typeof user);
+// console.log(user.userName, typeof userName);
+// console.log(user.age, typeof user.age);
