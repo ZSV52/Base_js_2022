@@ -118,14 +118,14 @@
 
 // console.log(myString.split(""));
 
-//  Number
+// Number
 // console.log(1, typeof 1);
 // console.log(5 - "2", typeof (5 - "2"));
 // console.log(5 - "123abc", typeof (5 - "123abc"));
 
 // console.log("\n");
 
-// // BigInt
+// BigInt
 // console.log(
 //   BigInt(0b11111111111111111111111111111111111111111111111111111),
 //   typeof BigInt(0b11111111111111111111111111111111111111111111111111111)
@@ -133,7 +133,7 @@
 
 // console.log("\n");
 
-// // String
+// String
 // console.log("Строка", typeof "Строка");
 // console.log("2" + 3, typeof ("2" + 3));
 
@@ -147,7 +147,7 @@
 
 // console.log("\n");
 
-// //Null, undefined
+// Null, undefined
 // console.log(null, typeof null);
 // console.log(null + 0, typeof (null + 0));
 // console.log(null - "2", typeof (null - "2"));
@@ -157,12 +157,12 @@
 
 // console.log("\n");
 
-// //Symblol
+// Symblol
 // console.log(Symbol("123"), typeof Symbol("123"));
 
 // console.log("\n");
 
-// //Object
+// Object
 // const newUser = {
 //   name: "Vasya",
 //   age: 23,
