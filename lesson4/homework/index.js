@@ -173,3 +173,23 @@
 //     console.log("Значение задано некорректно");
 //     break;
 // }
+
+// Общие задачи
+
+// 1.
+
+// let day = 35;
+
+// if (day >= 1 && day <= 10) {
+//   console.log(`${day} - Это первая декада`);
+// } else if (day > 10 && day <= 20) {
+//   console.log(`${day} - Это вторая декада`);
+// } else if (day > 20 && day <= 31) {
+//   console.log(`${day} - Это третья декада`);
+// } else if (day > 31) {
+//   console.log(`${day} - Значение задано некорректно`);
+// }
+
+// 2.
+
+// let month = 1;

@@ -142,7 +142,7 @@
 
 // const iterationText = "Итерация";
 
-//while
+// //while
 
 // const limit = 5;
 // let counter = 1;
