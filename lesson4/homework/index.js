@@ -105,3 +105,71 @@
 // }
 
 // test !== true ? console.log("Верно") : console.log("Неверно");
+
+// Работа с && (и) и || (или)
+
+// 1.
+
+// const a = 2;
+
+// if (a > 0 && a < 5) {
+//   console.log("Верно");
+// } else {
+//   console.log("Неверно");
+// }
+
+// 2.
+
+// const a = 2;
+
+// if (a == 0 || a == 2) {
+//   console.log(a + 7);
+// } else {
+//   console.log(a / 10);
+// }
+
+// 3.
+
+// const a = 3;
+// const b = 5;
+
+// if (a <= 1 && b >= 3) {
+//   console.log(a + b);
+// } else {
+//   console.log(a - b);
+// }
+
+// 4.
+
+// const a = 11;
+// const b = 14;
+
+// if ((a > 2 && a < 11) || (b >= 6 && b < 14)) {
+//   console.log("Верно");
+// } else {
+//   console.log("Неверно");
+// }
+
+// На switch-case
+
+// 1.
+
+// const num = 4;
+
+// switch (num) {
+//   case 1:
+//     console.log("Зима");
+//     break;
+//   case 2:
+//     console.log("Весна");
+//     break;
+//   case 3:
+//     console.log("Лето");
+//     break;
+//   case 4:
+//     console.log("Осень");
+//     break;
+//   default:
+//     console.log("Значение задано некорректно");
+//     break;
+// }
