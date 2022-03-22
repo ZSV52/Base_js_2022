@@ -142,12 +142,12 @@
 
 // const iterationText = "Итерация";
 
-// //while
+// while
 
 // const limit = 5;
 // let counter = 1;
 
-// while (counter <= 5) {
+// while (counter <= limit) {
 //   console.log(`${iterationText} - ${counter}`);
 //   counter++;
 // }
