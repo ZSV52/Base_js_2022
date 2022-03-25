@@ -1,3 +1,13 @@
+// Function declaration - объявление функции
+// Function expression - функциональное выражение
+// Arrow function - стрелочная функция
+
+// function showMessage() {
+//   console.log("hello");
+// }
+
+// showMessage();
+
 // const user = "Vasya";
 
 // function greetUser(name) {
@@ -6,13 +16,19 @@
 
 // greetUser(user);
 
+// let user;
+
+// function greetUser(name = "гость") {
+//   console.log(`Привет, ${name}`);
+// }
+
+// greetUser(user);
+
+// Function declaration
+
 // const user = {
 //   name: "Vasya",
 //   age: 18,
-// };
-
-// const showAllowedMsg = function () {
-//   console.log("Доступ разрешён");
 // };
 
 // function checkAccess(age) {
@@ -22,12 +38,40 @@
 //     showAllowedMsg();
 //   }
 // }
-
+// function showAllowedMsg() {
+//   console.log("Доступ разрешён");
+// }
 // function showDeniedMsg() {
 //   console.log("Доступ запрещен");
 // }
 
 // checkAccess(user.age);
+
+// Function expression
+
+// const user = {
+//   name: "Vasya",
+//   age: 18,
+// };
+
+// const showAllowedMsg = function () {
+//   console.log("Доступ разрешён"); // использовать function expression необходимо до вызова функции
+// };
+// function checkAccess(age) {
+//   if (age < 18) {
+//     showDeniedMsg();
+//   } else {
+//     showAllowedMsg();
+//   }
+// }
+
+// function showDeniedMsg() {
+//   console.log("Доступ запрещен"); // можно использовать function declaration после вызова функции
+// }
+
+// checkAccess(user.age);
+
+// Директива return
 
 // function calcValue(a, b) {
 //   const result = a + b;
@@ -65,6 +109,9 @@
 
 // console.log(myVar);
 
+// Практика
+// 1. Написать функцию, которая будет принимать имя пользователя, и выводить строку с приветствием данного пользователя, если имени пользователя нет, выводить приветствие гостя.
+
 // const user = {
 //   name: "",
 // };
@@ -81,6 +128,8 @@
 
 // sayHi(greetMsg, getName(user));
 
+// 2. Написать функцию, которая в качестве первого параметра будет принимать численное значение, а в качестве второго параметра будет принимать степень, в которую надо возвести первый аргумент. По умолчанию, второй аргумент единица.
+
 // const calcPower = function (num, power = 1) {
 //   if (typeof num !== "number") {
 //     const errorMsg = "Некорректные арнументы";
@@ -92,6 +141,8 @@
 // const result = calcPower(2, 3);
 
 // console.log(result);
+
+// 3. Написать функцию, которая будет принимать в качестве входного параметра массив любых, целых чисел, и будет возвращать среднее арифметическое значение данного массива*.
 
 // const myArray = [];
 
@@ -127,7 +178,8 @@
 // const result = calcValue(3, 5);
 // console.log(result);
 
-//1
+// 1
+
 // const msgsAmount = 5;
 // const message = "Сообщение";
 
@@ -139,7 +191,7 @@
 
 // showMessage(message, msgsAmount);
 
-//2
+// 2
 
 // const myChar = "н";
 
