@@ -218,7 +218,56 @@
 
 // 15. Дано число. Сложите его цифры. Если сумма получилась более 9-ти, опять сложите его цифры. И так, пока сумма не станет однозначным числом (9 и менее).
 
+// const isSumLessNine = (num) => {
+//   let newSum = getDigitsSum(num);
+//   if (newSum > 9) {
+//     return isSumLessNine(newSum);
+//   }
+//   return newSum;
+// };
+
+// console.log(isSumLessNine(305));
+
+// =============================
+
+// const countRecJobs = (num) => {
+//   let countRec = 0;
+
+//   const testRecursion = (num) => {
+//     const digitsSum = getDigitsSum(num);
+
+//     if (digitsSum > 9) {
+//       countRec += 1;
+//       testRecursion(num - 1);
+//       return `Рекурсия отработала: ${countRec}. ${digitsSum}`;
+//     }
+//     return digitsSum;
+//   };
+
+//   return testRecursion(num);
+// };
+
+// console.log(countRecJobs(269949));
+
 // 16. Напишите стрелочную функцию, которая будет возвращать true если строка является палиндромом и false в противном случае.
+
+// const isPalindrome = (str) => {
+//   str = str.toLowerCase();
+//   return str === str.split("").reverse().join("");
+// };
+
+// console.log(isPalindrome("Анна"));
+
+// ==============================
+
+// const newIsPalindrome = (str) => {
+//   for (let i = 0, j = str.length - 1; i < j; i++, j--) {
+//     if (str[i] != str[j]) return false;
+//   }
+//   return true;
+// };
+
+// console.log(newIsPalindrome("aнна"));
 
 // P.S.
 
