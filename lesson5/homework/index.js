@@ -57,32 +57,24 @@
 //   switch (i) {
 //     case 1:
 //       return "понедельник";
-//       break;
 //     case 2:
 //       return "вторник";
-//       break;
 //     case 3:
 //       return "среда";
-//       break;
 //     case 4:
 //       return "четверг";
-//       break;
 //     case 5:
 //       return "пятница";
-//       break;
 //     case 6:
 //       return "суббота";
-//       break;
 //     case 7:
 //       return "воскресенье";
-//       break;
 //     default:
 //       return "Указанное значение не соответствует дню недели";
-//       break;
 //   }
 // };
 
-// console.log(getDayOfWeek(10));
+// console.log(getDayOfWeek(5));
 
 // 5. Сделайте функцию, которая параметрами принимает 2 числа. Если эти числа равны - пусть функция вернет true, а если не равны - false.
 
