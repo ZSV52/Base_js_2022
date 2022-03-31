@@ -241,9 +241,85 @@
 
 // 14. Напишите функцию path(pathname), которая возвращает имя файла (подстрока после последнего символа "\" ) из полного пути к файлу.
 
+// const myString = "JavaScript/VideoLessons/JS/JavaScript_b7_26032022.webm";
+
+// const path = (pathname) => {
+//   const fileNameIndex = pathname.lastIndexOf("/");
+//   return pathname.slice(fileNameIndex + 1);
+// };
+
+// console.log(path(myString));
+
+// =============================
+
+// const path = (pathname) => {
+//   const pathnameToArray = pathname.split("/");
+//   const filenameIndex = pathnameToArray.length - 1;
+
+//   return pathnameToArray[filenameIndex];
+// };
+
+// console.log(path(myString));
+
 // 15. Создайте метод объекта String endsWith(), который сравнивает подстроку str1 с окончанием исходной строки str и определяет заканчивается ли строка символами подстроки.
 
+const str = "Ехал Грека через реку";
+const str1 = "реку";
+const str2 = "море";
+
+// const endsWith = (str, strToFind) => {
+//   const indexOfStrToCompare = str.length - strToFind.length;
+
+//   return str.substr(indexOfStrToCompare) === strToFind;
+// };
+
+// console.log(endsWith(str, str2));
+
+// =============================
+
+// String.prototype.endsWith = function (subString) {
+//   console.log(this.substr(0, 1));
+//   if (subString.length > this.length) {
+//     return false;
+//   }
+//   return this.substr(this.length - subString.length) === subString;
+// };
+
 // 16. Напишите функцию getSubstr(str, char, pos), которая возвращает часть строки, расположенную после или до указанного символа char в зависимости от параметра pos.
+
+const myString = "Ехал Грека через реку";
+const myChar = "л";
+
+// const getSubstr = (str, char, pos) => {
+//   if (pos != "before" && pos != "after") {
+//     return `Use "before" or "after" for pos`;
+//   }
+//   const indexOfChar = str.indexOf(char);
+//   if (pos === "before") {
+//     return str.slice(0, indexOfChar);
+//   }
+//   return str.slice(indexOfChar + char.length);
+// };
+
+// console.log(getSubstr(myString, myChar, "after"));
+
+// =============================
+
+// const getSubstr = (str, char, pos) => {
+//   const lowerCasePos = pos.toLowerCase();
+
+//   switch (lowerCasePos) {
+//     case "before":
+//       return str.slice(0, str.indexOf(char));
+//     case "after":
+//       return str.slice(str.indexOf(char) + 1);
+//     default:
+//       return str;
+//   }
+// };
+
+// console.log(getSubstr(myString, myChar, "after"));
+// Выдаёт ошибку, если не передать "before" или "after"
 
 // 17. Напишите функцию insert(str, substr, pos), которая вставляет подстроку substr в указанную позицию pos строки str. По умолчанию подстрока вставляется в начало строки.
 
