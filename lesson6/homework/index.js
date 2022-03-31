@@ -155,13 +155,89 @@
 
 // 9. Напишите функцию comparison(str1, str2), которая сравнивает строки без учёта регистра символов.
 
+// const comparison = (str1, str2) =>
+//   str1.toLowerCase() === str2.toLowerCase() ? "Равны" : "Не равны";
+
+// console.log(comparison("Star Wars", "star wars"));
+
 // 10. Напишите функцию insensitiveSearch(str1, str2), которая осуществляет поиск подстроки str2 в строке str1 без учёта регистра символов.
+
+// const myString1 = "Star Wars";
+// const myString2 = "wars";
+
+// const insensitiveSearch = (str1, str2) => {
+//   const isIncludes = str1.toLowerCase().includes(str2.toLowerCase());
+//   return isIncludes ? "Match!" : "Mismatch!";
+// };
+
+// console.log(insensitiveSearch(myString1, myString2));
 
 // 11. Напишите функцию initCap(str), которая преобразует стиль написания составных слов строки в CamelCase, при котором несколько слов пишутся слитно без пробелов, при этом каждое слово внутри строки пишется с заглавной буквы.
 
+// const myString = "star wars return of the jedi";
+
+// const initCap = (str) => {
+//   const result = str
+//     .toLowerCase()
+//     .split(" ")
+//     .map((element) => {
+//       return element[0].toUpperCase() + element.slice(1);
+//     });
+//   return result.join("");
+// };
+
+// console.log(initCap(myString));
+
 // 12. Напишите функцию initSnake(str), которая преобразует стиль написания составных слов строки из CamelCase в snake_case, при котором несколько слов разделяются символом подчеркивания (_), причём каждое слово пишется с маленькой буквы.
 
+// const myString = "StarWarsReturnOfTheJedi";
+
+// const initSnake = (str) => {
+//   const newString = str.replace(
+//     /[A-ZА-ЯЁ]/g,
+//     (letter) => "_" + letter.toLowerCase()
+//   );
+//   return newString.slice(1);
+// };
+
+// console.log(initSnake(myString));
+
+// =============================
+
+// const initSnake = (str) => {
+//   let newString = "";
+
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === str[i].toUpperCase()) {
+//       newString += "_" + str[i].toLowerCase();
+//       continue;
+//     }
+//     newString += str[i];
+//   }
+//   return newString.slice(1);
+// };
+
+// console.log(initSnake(myString));
+
 // 13. Напишите функцию repeatStr(str, n), которая возвращает строку повторяемую определённое количество раз.
+
+// const myString = "Star Wars";
+
+// const repeatStr = (str, n) => str.repeat(n);
+
+// console.log(repeatStr(myString, 5));
+
+// =============================
+
+// const repeatStr = (str, n) => {
+//   let result = "";
+//   for (let i = 0; i < n; i++) {
+//     result += str;
+//   }
+//   return result;
+// };
+
+// console.log(repeatStr(myString, 5));
 
 // 14. Напишите функцию path(pathname), которая возвращает имя файла (подстрока после последнего символа "\" ) из полного пути к файлу.
 
