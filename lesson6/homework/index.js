@@ -263,9 +263,9 @@
 
 // 15. Создайте метод объекта String endsWith(), который сравнивает подстроку str1 с окончанием исходной строки str и определяет заканчивается ли строка символами подстроки.
 
-const str = "Ехал Грека через реку";
-const str1 = "реку";
-const str2 = "море";
+// const str = "Ехал Грека через реку";
+// const str1 = "реку";
+// const str2 = "море";
 
 // const endsWith = (str, strToFind) => {
 //   const indexOfStrToCompare = str.length - strToFind.length;
@@ -287,8 +287,8 @@ const str2 = "море";
 
 // 16. Напишите функцию getSubstr(str, char, pos), которая возвращает часть строки, расположенную после или до указанного символа char в зависимости от параметра pos.
 
-const myString = "Ехал Грека через реку";
-const myChar = "л";
+// const myString = "Ехал Грека через реку";
+// const myChar = "л";
 
 // const getSubstr = (str, char, pos) => {
 //   if (pos != "before" && pos != "after") {
@@ -323,12 +323,142 @@ const myChar = "л";
 
 // 17. Напишите функцию insert(str, substr, pos), которая вставляет подстроку substr в указанную позицию pos строки str. По умолчанию подстрока вставляется в начало строки.
 
+// const myString = "Тут какая-то строка";
+// const mySubString = "А вот тут какая-то подстрока";
+
+// const insert = (str, substr, pos) => {
+//   if (typeof pos != "number" && pos != undefined) {
+//     return `please enter a number for "pos"`;
+//   }
+//   if (typeof pos === "number") {
+//     const myNewString = str.slice(0, pos) + substr + str.slice(pos);
+//     return myNewString;
+//   }
+//   const myNewString = substr + str;
+//   return myNewString;
+// };
+
+// console.log(insert(myString, mySubString, 4));
+
+// =============================
+
+// const str = "Ехал Грека через реку";
+
+// const insert = (str, substr, pos) => {
+//   if (!pos) {
+//     return substr + str;
+//   }
+//   const strToArray = str.split("");
+//   strToArray.splice(pos, 0, substr);
+
+//   return strToArray.join("");
+// };
+
+// console.log(insert(str, "Не "));
+// console.log(insert(str, "Не ", 5));
+
 // 18. Напишите функцию limitStr(str, n, symb), которая обрезает строку, если она длиннее указанного количества символов n. Усеченная строка должна заканчиваться троеточием «...» (если не задан параметр symb) или заданным символом symb.
+
+// const myString = "Here is a very long text about something";
+
+// const limitStr = (str, n, symb) => {
+//   if (str.length <= n) {
+//     return str;
+//   }
+//   if (!symb) {
+//     return str.slice(0, n) + "...";
+//   }
+//   return str.slice(0, n) + symb;
+// };
+
+// console.log(limitStr(myString, 20));
+// console.log(limitStr(myString, 20, "#"));
+
+// =============================
+
+// const myStr = "Очень длинная строка";
+
+// const limitStr = (str, n, symb) => {
+//   if (str.length <= n) {
+//     return str;
+//   }
+//   const endingSymb = symb ? symb : "...";
+
+//   return str.slice(0, n) + endingSymb;
+// };
+
+// console.log(limitStr(myStr, 10));
+// console.log(limitStr(myStr, 5, "№"));
 
 // 19. Напишите функцию count(str, stringsearch), которая возвращает количество символов stringsearch в строке str.
 
+// const myString = "Star Wars";
+// const myStrSearched = "r";
+
+// const count = (str, stringsearch) => {
+//   let counter = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === stringsearch) counter += 1;
+//   }
+//   return `"${stringsearch}" found ${counter} times`;
+// };
+
+// console.log(count(myString, myStrSearched));
+
 // 20. Напишите функцию strip(str), которая удаляет все лишние пробелы из строки str.
+
+// const myString = "Star       Wars   Return    Of  The Jedi     ";
+
+// const strip = (str) => {
+//   const trimStrToArr = str.trim().split(" ");
+
+//   let newArray = [];
+//   for (let i = 0; i < trimStrToArr.length; i++) {
+//     if (trimStrToArr[i]) newArray.push(trimStrToArr[i]);
+//   }
+//   return newArray.join(" ");
+// };
+
+// console.log(strip(myString));
 
 // 21. Напишите функцию cutString(str, n), которая удаляет лишние слова из строки str, оставив в ней n слов.
 
+// const myString = "Star Wars Return Of The Jedi";
+
+// const cutString = (str, n) => str.split(" ").splice(0, n).join(" ");
+
+// console.log(cutString(myString, 4));
+
+// =============================
+
+// const cutString = (str, n) => {
+//   const myArr = str.split(" ");
+//   let myNewArr = [];
+//   for (let i = 0; i < n; i++) {
+//     myNewArr.push(myArr[i]);
+//   }
+//   const myNewString = myNewArr.join(" ");
+//   return myNewString;
+// };
+
+// console.log(cutString(myString, 4));
+
 // 22. Напишите функцию findWord(word, str), которая проверяет, существует ли в строке str слова word.
+
+// const myString = "Star Wars Return Of The Jedi";
+
+// const findWord = (word, str) => {
+//   let myArr = str.split(" ");
+//   for (let i = 0; i < myArr.length; i++) {
+//     if (myArr[i] === word) {
+//       return `Yes, there is "${word}" in this string`;
+//     }
+//   }
+//   return `No, there is no "${word}" in this string`;
+// };
+
+// console.log(findWord("Clones", myString));
+
+// =============================
+
+// const findWord = (word, str) => str.includes(word);
