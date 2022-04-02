@@ -130,3 +130,66 @@
 // console.log(modifiedUsers);
 
 // forEach
+
+// reduce
+
+// ==================
+
+// Копирование  объектов
+
+// let myVar = 1;
+// let myVar2 = myVar;
+
+// myVar2 = 5;
+
+// console.log(myVar, myVar2);
+
+// const myObject = { name: "Vasya" };
+// const myObject2 = myObject;
+
+// myObject2.name = "Petya";
+
+// console.log(myObject, myObject2);
+
+// const myObject = { name: "Vasya" };
+// const myObject2 = Object.assign({}, myObject);
+// const myObject2 = { ...myObject };
+
+// const { name } = myObject2;
+// console.log(name);
+
+// myObject2.name = "Petya";
+
+// console.log(myObject, myObject2);
+
+// Оператор расширения (spread)
+
+// const myArray = [5, 4, 2, 6];
+// const myArray2 = [10, 12, 8];
+
+// const newArray = [...myArray, ...myArray2];
+// console.log(newArray);
+
+// const myFunc = (arg1, arg2, ...args) => {
+//   console.log("ARG1", arg1);
+//   console.log("ARG2", arg2);
+//   console.log("ARGS", args); // ARGS "завернётся" в массив
+// };
+
+// myFunc(5, 2, 4, 7, 10, 20);
+
+// const myArray = [2, 5, 10];
+
+// for (let element of myArray) {
+//   console.log(element);
+// }
+
+// const myObject = { name: "Vasya", age: 20, gender: "male" };
+
+// const newArr = [];
+
+// for (let key in myObject) {
+//   newArr.push(myObject[key]);
+// }
+
+// console.log(newArr);
