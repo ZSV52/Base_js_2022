@@ -31,13 +31,53 @@
 
 // 3. Написать функцию  которая будет принимать два массива, и будет сравнивать их, если они идентичны (элементы совпадают по значению и по индексу) то функция возвращает true, в противном случае false.
 
+// const myArr1 = [1, 2, 3, 4, 5, 6];
+// const myArr2 = [1, 2, 3, 4, 5, 6];
+
+// const isArrayEqual = (arr1, arr2) => {
+//   if (arr1.length !== arr2.length) {
+//     return false;
+//   }
+//   const res = arr1.every((el, i) => el === arr2[i]);
+//   return res;
+// };
+
+// console.log(isArrayEqual(myArr1, myArr2));
+
 // Презентация. Практика 2
 
 // 1. Создайте объект и скопируйте данный объект с помощью: Object.assign() и spread оператора. Изменить любое свойство в копии объекта, и проверить не изменился ли исходный.
 
 // 2. Написать функцию  которая будет принимать n-ое количество аргументов, в качестве результата функция будет возвращать сумму всех четных элементов. Для решения использовать цикл for (... of …).
 
+// const countArgsSum = (...args) => {
+//   let result = 0;
+
+//   for (let arg of args) {
+//     if (arg % 2 === 0) {
+//       result += arg;
+//     }
+//     return result;
+//   }
+// };
+
+// console.log(countArgsSum(2, 5, 7, 13, 56, 4));
+
 // 3. Написать функцию  которая будет принимать два массива, и в качестве результата будет возвращать только  те значения которые есть и в первом и во втором массиве.
+
+// const myArr1 = [1, 4, 5, 10, 22, 6, 4];
+// const myArr2 = [1, 6, 8, 3, 4, 4];
+
+// const getCommonElements = (arr1, arr2) => {
+//   const newArr = [];
+
+//   arr2.forEach(
+//     (elem) => arr1.includes(elem) && !newArr.includes(elem) && newArr.push(elem)
+//   );
+//   return newArr;
+// };
+
+// console.log(getCommonElements(myArr1, myArr2));
 
 // Основные задачи
 
@@ -51,18 +91,34 @@
 
 // 2. Имеется массив простых чисел: numbers = [2, 3, 5, 7, 11, 13, 17, 19]. Использую метод reduce() напишите функцию currentSums(numbers), которая возвращает новый массив из такого же числа элементов, в котором на каждой позиции будет находиться сумма элементов массива numbers до этой позиции включительно.
 
-const numbers = [2, 3, 5, 7, 11, 13, 17, 19];
+// const numbers = [2, 3, 5, 7, 11, 13, 17, 19];
 
-const currentSums = (numbers) => {
-  let result = [];
-  numbers.reduce(
-    (accum, current, index) => (result[index] = accum + current),
-    0
-  );
-  return result;
-};
+// const currentSums = (numbers) => {
+//   const result = [];
+//   numbers.reduce(
+//     (accum, current, index) => (result[index] = accum + current),
+//     0
+//   );
+//   return result;
+// };
 
-console.log(currentSums(numbers));
+// console.log(currentSums(numbers));
+
+// ======================
+
+// const numbers = [2, 3, 5, 7, 11, 13, 17, 19];
+
+// const currentSums = (numbers) => {
+//   const res = [];
+//   const totalSum = numbers.reduce((accum, currentEl) => {
+//     res.push(accum);
+//     return accum + currentEl;
+//   });
+//   res.push(totalSum);
+//   return res;
+// };
+
+// console.log(currentSums(numbers));
 
 // 3. Напишите код, который получает из массива чисел новый массив, содержащий пары чисел, которые в сумме должны быть равны семи: (0:7), (1:6) и т.д.
 
