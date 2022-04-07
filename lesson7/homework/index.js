@@ -159,28 +159,77 @@
 
 // 3. Напишите код, который получает из массива чисел новый массив, содержащий пары чисел, которые в сумме должны быть равны семи: (0:7), (1:6) и т.д.
 
-const myArray = [2, 3, 0, 5, 4, 7, 1, 6];
+// const myArray = [2, 3, 0, 5, 4, 7, 1, 6];
 
-const getPairOfSumIsSeven = (arr) => {
-  const arrCopy = [...arr];
-  const result = [];
-  for (let num of arrCopy) {
-    for (let item of arrCopy) {
-      if (num + item === 7) {
-        result.push([num, item]);
-      }
-    }
-  }
-  return result;
-};
+// const getPairOfSumIsSeven = (arr, compareNum) => {
+//   const arrCopy = [...arr];
+//   const result = [];
+//   for (let num of arrCopy) {
+//     for (let item of arrCopy) {
+//       if (num + item === compareNum) {
+//         result.push([num, item]);
+//       }
+//     }
+//   }
+//   return result;
+// };
 
-console.log(getPairOfSumIsSeven(myArray));
+// console.log(getPairOfSumIsSeven(myArray, 7));
+
+// ======================
+
+// const myArray = [2, 3, 0, 5, 4, 7, 1, 6, 4, 7, 1, 6];
+
+// const getPairOfSumIsSeven = (arr) => {
+//   const result = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       if (
+//         arr[i] + arr[j] === 7 &&
+//         !result.includes(`${arr[i]}:${arr[j]}`) &&
+//         !result.includes(`${arr[j]}:${arr[i]}`)
+//       ) {
+//         result.push(`${arr[i]}:${arr[j]}`);
+//       }
+//     }
+//   }
+//   return result;
+// };
+
+// console.log(getPairOfSumIsSeven(myArray));
 
 // 4. Напишите код, создающий массив, который будет состоять из первых букв слов строки str.
 
+// const myStr = "Star Wars Return Of The Jedi";
+
+// const getFirstCharOfStr = (str) => str.split(" ").map((char) => char[0]);
+
+// console.log(getFirstCharOfStr(myStr));
+
 // 5. Напишите код, создащий массив, который будет состоять из строк, состоящих из предыдущего, текущего и следующего символа строки str.
 
+// const myStr = "Star Wars";
+// const result = [];
+
+// const getArrOfStrings = (str) => {
+//   for (let i = 0; i < str.length; i++) {
+//     result.push(str.substring(i - 1, i + 2));
+//   }
+//   return result;
+// };
+
+// console.log(getArrOfStr(myStr));
+
 // 6. Напишите код, преобразующий массив цифр, которые располагаются неупорядоченно, в массив цифр расположенных по убыванию их значений.
+
+// const myArr = [2, 6, 4, 3, 8, 0, 1, 5, 7, 9, 10];
+
+// const getArrOfDescendingNums = (arr) => arr.sort((a, b) => b - a); // по убыванию
+// const getArrOfAscendingNums = (arr) => arr.sort((a, b) => a - b); // по возрастанию
+
+// console.log(getArrOfDescendingNums(myArr));
+// console.log(getArrOfAscendingNums(myArr));
 
 // 7. Напишите код, объединяющий три массива цифр, и располагающий цифры, в полученном массиве, в порядке убывания их значений через пробел.
 
