@@ -10,6 +10,13 @@
 //   return sum;
 // };
 
+// const getSumOfPositiveNum = (arr) => {
+//   const result = arr
+//     .filter((el) => el > 0 && el % 2 === 0)
+//     .reduce((acc, current) => acc + current);
+//   return result;
+// };
+
 // console.log(getSumOfPositiveNum(myArr));
 
 // 2. Написать функцию, которая будет принимать массив чисел, и будет убирать повторяющиеся значения из переданного массива, в качестве результата возвращать новый массив с уникальными значениями из исходного.
@@ -29,6 +36,24 @@
 
 // console.log(getUniqueArray(myArr));
 
+// ===================
+
+// const myArr = [1, 2, 4, 4, 10, 15, 13, 13, 12];
+
+// const getUniqueElements = (arr) => {
+//   const result = [];
+
+//   arr.forEach((item) => {
+//     if (!result.includes(item)) {
+//       result.push(item);
+//     }
+//   });
+
+//   return result;
+// };
+
+// console.log(getUniqueElements(myArr));
+
 // 3. Написать функцию  которая будет принимать два массива, и будет сравнивать их, если они идентичны (элементы совпадают по значению и по индексу) то функция возвращает true, в противном случае false.
 
 // const myArr1 = [1, 2, 3, 4, 5, 6];
@@ -38,7 +63,9 @@
 //   if (arr1.length !== arr2.length) {
 //     return false;
 //   }
+
 //   const res = arr1.every((el, i) => el === arr2[i]);
+
 //   return res;
 // };
 
@@ -47,6 +74,16 @@
 // Презентация. Практика 2
 
 // 1. Создайте объект и скопируйте данный объект с помощью: Object.assign() и spread оператора. Изменить любое свойство в копии объекта, и проверить не изменился ли исходный.
+
+// const movie1 = { name: "The Phantom Menace" };
+
+// const movie2 = Object.assign({}, movie1);
+// const movie2 = { ...movie1 };
+
+// movie2.name = "Attack of the Clones";
+
+// console.log(movie1);
+// console.log(movie2);
 
 // 2. Написать функцию  которая будет принимать n-ое количество аргументов, в качестве результата функция будет возвращать сумму всех четных элементов. Для решения использовать цикл for (... of …).
 
@@ -57,8 +94,8 @@
 //     if (arg % 2 === 0) {
 //       result += arg;
 //     }
-//     return result;
 //   }
+//   return result;
 // };
 
 // console.log(countArgsSum(2, 5, 7, 13, 56, 4));
@@ -121,6 +158,23 @@
 // console.log(currentSums(numbers));
 
 // 3. Напишите код, который получает из массива чисел новый массив, содержащий пары чисел, которые в сумме должны быть равны семи: (0:7), (1:6) и т.д.
+
+const myArray = [2, 3, 0, 5, 4, 7, 1, 6];
+
+const getPairOfSumIsSeven = (arr) => {
+  const arrCopy = [...arr];
+  const result = [];
+  for (let num of arrCopy) {
+    for (let item of arrCopy) {
+      if (num + item === 7) {
+        result.push([num, item]);
+      }
+    }
+  }
+  return result;
+};
+
+console.log(getPairOfSumIsSeven(myArray));
 
 // 4. Напишите код, создающий массив, который будет состоять из первых букв слов строки str.
 
