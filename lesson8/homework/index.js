@@ -1,12 +1,41 @@
 // 1. Реализовать таймер-функцию используя замыкания. Функция принимает два  аргумента начальное значение и значение завершения. Таймер движется назад.При достижении точки завершения в консоль выводится значение таймера и сообщение о завершении работы таймера.
 
+// Решение 1
+
+// const timer = (start, end) => {
+//   let current = start;
+//   console.log(current);
+//   if (current > end) {
+//     setTimeout(() => timer(current, end), 1000);
+//     current--;
+//   } else {
+//     console.log(`Таймер завершил работу на ${current} секунде`);
+//   }
+// };
+
+// timer(35, 30);
+
+// Решение 2
+
+// const timer = (start, end) => {
+//   --start;
+//   if (start > end) {
+//     console.log(start);
+//     setTimeout(() => timer(start, end), 1000);
+//   } else {
+//     console.log(`Таймер завершил работу на ${start} секунде`);
+//   }
+// };
+
+// timer(35, 30);
+
 // 2. Что выведет функция?
 // function f() {
-//  alert(this);
+//   alert(this);
 // }
 
 // let user = {
-//  g: f.bind(null),
+//   g: f.bind(null),
 // };
 
 // user.g();
@@ -22,15 +51,15 @@
 
 // 4. В свойство функции записано значение. Изменится ли оно после применения bind?
 // function sayHi() {
-//  alert( this.name );
+//   alert(this.name);
 // }
 // sayHi.test = 5;
 
 // let bound = sayHi.bind({
-//  name: "Вася"
+//   name: "Вася",
 // });
 
-// alert( bound.test );
+// alert(bound.test);
 
 // 5. Вызов askPassword() в приведённом ниже коде должен проверить пароль и затем вызвать user.loginOk/loginFail в зависимости от ответа. Однако, его вызов приводит к ошибке. Почему?
 
@@ -86,4 +115,14 @@
 // func('Петров', 'Петр'); //тут должно вывести 'привет, Петров Петр'
 
 // 8. Есть функция которая складывает три числа.Выполните каррирование.
-// const sum = (a, b, c) => a + b + c
+// const sum = (a, b, c) => a + b + c;
+
+// const sum = (a) => {
+//   return (b) => {
+//     return (c) => {
+//       return a + b + c;
+//     };
+//   };
+// };
+
+// console.log(sum(1)(2)(3));
