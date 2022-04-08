@@ -233,10 +233,89 @@
 
 // 7. Напишите код, объединяющий три массива цифр, и располагающий цифры, в полученном массиве, в порядке убывания их значений через пробел.
 
+// const myArr1 = [1, 3, 2];
+// const myArr2 = [9, 4, 10, 5];
+// const myArr3 = [6, 8, 7, 0];
+
+// const getSplitAndDescendedArray = (arr1, arr2, arr3) => {
+//   const arrConcated = arr1.concat(arr2, arr3);
+//   return getArrOfDescendingNums(arrConcated).join(" ").split();
+// };
+
+// console.log(getSplitAndDescendedArray(myArr1, myArr2, myArr3));
+
+// ======================
+
+// const getSplitAndDescendedArrays = (arr1, arr2, arr3) => {
+//   const joinedArrays = [...arr1, ...arr2, ...arr3];
+//   const sortedArray = joinedArrays.sort((a, b) => b - a);
+
+//   return [sortedArray.join(" ")];
+// };
+
+// console.log(getSplitAndDescendedArrays(myArr1, myArr2, myArr3));
+
 // 8. Дан двухмерный массив с числами, например [[1, 2, 3], [4, 5], [6]]. Найдите сумму элементов этого массива. Массив, конечно же, может быть произвольным.
+
+// const myArr = [[1, 2, 3], [4, 5], [6]];
+
+// const sumOfArrayNums = (arr) => {
+//   return arr.flat().reduce((acc, elem) => acc + elem, 0);
+// };
+
+// console.log(sumOfArrayNums(myArr));
 
 // 9. Дан массив с числами. Не используя метода reverse переверните его элементы в обратном порядке.
 
+// const myArr = [0, 1, 2, 3, 4, 5];
+
+// const getReversedArray = (arr) => {
+//   return arr.map((elem, index, arr) => arr[arr.length - 1 - index]);
+// };
+
+// console.log(getReversedArray(myArr));
+
 // 10. Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
 
+// const myArr = [1, 2, 4, 7, 10, 5];
+
+// const calcFunc = (arr) => {
+//   let count = 0;
+
+//   arr.reduce((acc, elem) => {
+//     if (acc > 10) {
+//       return count;
+//     }
+//     count++;
+//     return acc + elem;
+//   });
+
+//   return count;
+// };
+
+// console.log(calcFunc(myArr));
+
+// ======================
+
+// const myArr = [1, 2, 4, 7, 10, 5];
+
+// const calcValueOfElements = (arr) => {
+//   return arr.reduce(
+//     (elem, current) => (elem[1] < 10 ? [elem[0] + 1, elem[1] + current] : elem),
+//     [0, 0]
+//   )[0];
+// };
+
+// console.log(calcValueOfElements(myArr));
+
 // 11. Напишите функцию arrayFill, которая будет заполнять массив заданными значениями. Первым параметром функция принимает значение, которым заполнять массив, а вторым - сколько элементов должно быть в массиве. Пример: arrayFill('x', 5) сделает массив ['x', 'x', 'x', 'x', 'x'].
+
+// const arrayFill = (char, value) => {
+//   const result = [];
+//   for (let i = 0; i < value; i++) {
+//     result.push(char);
+//   }
+//   return result;
+// };
+
+// console.log(arrayFill("x", 5));
