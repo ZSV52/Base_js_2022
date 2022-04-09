@@ -31,7 +31,7 @@
 
 // 2. Что выведет функция?
 // function f() {
-//   alert(this);
+//   console.log(this);
 // }
 
 // let user = {
@@ -51,6 +51,8 @@
 
 // f();
 
+// Нельзя
+
 // 4. В свойство функции записано значение. Изменится ли оно после применения bind?
 // function sayHi() {
 //   alert(this.name);
@@ -59,59 +61,61 @@
 
 // let bound = sayHi.bind({
 //   name: "Вася",
-// });
+// }); // в этот момент перекрываем всё предыдущее
 
 // console.log(bound.test);
 
 // 5. Вызов askPassword() в приведённом ниже коде должен проверить пароль и затем вызвать user.loginOk/loginFail в зависимости от ответа. Однако, его вызов приводит к ошибке. Почему?
 
 // function askPassword(ok, fail) {
-//  let password = prompt("Password?", '');
-//  if (password == "rockstar") ok();
-//  else fail();
+//   const password = prompt("Password?", "");
+//   if (password == "rockstar") ok();
+//   else fail();
 // }
 
 // let user = {
-//  name: 'Вася',
+//   name: "Вася",
 
-//  loginOk() {
-//    alert(`${this.name} logged in`);
-//  },
+//   loginOk() {
+//     alert(`${this.name} logged in`);
+//   },
 
-//  loginFail() {
-//    alert(`${this.name} failed to log in`);
-//  },
-
+//   loginFail() {
+//     alert(`${this.name} failed to log in`);
+//   },
 // };
 
-// askPassword(user.loginOk, user.loginFail);
+// askPassword(user.loginOk.bind(user), user.loginFail.bind(user)); // с помощью bind привязать контекст объекта User
 
 // 6. Объект user был изменён. Теперь вместо двух функций loginOk/loginFail у него есть только одна – user.login(true/false). Что нужно передать в вызов функции askPassword в коде ниже, чтобы она могла вызывать функцию user.login(true) как ok и функцию user.login(false) как fail?
 
 // function askPassword(ok, fail) {
-//  let password = prompt("Password?", '');
-//  if (password == "rockstar") ok();
-//  else fail();
+//   let password = prompt("Password?", "");
+//   if (password == "rockstar") ok();
+//   else fail();
 // }
 
 // let user = {
-//  name: 'John',
+//   name: "John",
 
-//  login(result) {
-//    alert( this.name + (result ? ' logged in' : ' failed to log in') );
-//  }
+//   login(result) {
+//     alert(this.name + (result ? " logged in" : " failed to log in"));
+//   },
 // };
 
-// askPassword(?, ?);
+// askPassword(user.login.bind(user, true), user.login.bind(user, false));
 
 // 7. Напишите в указанном месте конструкцию с методом bind() так, чтобы this внутри функции func всегда указывал на value. Eсть функция const sum = (a, b, c) => a + b + c, которая складывает три числа.из переменной elem. var elem = {value: ‘Привет’}
 
+// const elem = { value: "Привет"}
+
 // function func(surname, name) {
-// alert(this.value + ', ' + surname + ' ' + name);
+// console.log(this.value + ', ' + surname + ' ' + name);
 // }
 
-// let func = func.bind(elem)
-// //Тут напишите конструкцию с bind()
+// let boundFunc = func.bind(elem)
+
+//Тут напишите конструкцию с bind()
 
 // func('Иванов', 'Иван'); //тут должно вывести 'привет, Иванов Иван'
 // func('Петров', 'Петр'); //тут должно вывести 'привет, Петров Петр'
