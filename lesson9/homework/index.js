@@ -1,10 +1,191 @@
 // 1. Реализуйте класс Worker (Работник), который будет иметь следующие свойства: name (имя), surname (фамилия), rate (ставка за день работы), days (количество отработанных дней). Также класс должен иметь метод getSalary(), который будет выводить зарплату работника. Зарплата - это произведение (умножение) ставки rate на количество отработанных дней days. И метод getFullName() - имя и фамиля работника.
 
+// class Worker {
+//   constructor(props) {
+//     this.name = props.name;
+//     this.surname = props.surname;
+//     this.rate = props.rate;
+//     this.days = props.days;
+//   }
+
+//   getSalary() {
+//     console.log(this.rate * this.days);
+//   }
+
+//   getFullName() {
+//     console.log(`${this.name} ${this.surname}`);
+//   }
+// }
+
+// const workerMikhail = new Worker({
+//   name: "Mikhail",
+//   surname: "Gusev",
+//   rate: 3000,
+//   days: 22,
+// });
+
+// console.log(workerMikhail);
+// workerMikhail.getFullName();
+// workerMikhail.getSalary();
+
 // 2. Напишите новый класс Boss, этот класс наследуется от класса Worker и прошлого задания. Появляется новые свойство: workers - количество работников. И зарплата считается по другому: произведение (умножение) ставки rate на количество отработанных дней и на количество работников.
+
+// class Worker {
+//   constructor(props) {
+//     this.name = props.name;
+//     this.surname = props.surname;
+//     this.rate = props.rate;
+//     this.days = props.days;
+//   }
+
+//   getSalary() {
+//     console.log(this.rate * this.days);
+//   }
+
+//   getFullName() {
+//     console.log(`${this.name} ${this.surname}`);
+//   }
+// }
+// class Boss extends Worker {
+//   constructor(props) {
+//     super(props);
+//     this.workers = props.workers;
+//   }
+
+//   getSalary() {
+//     console.log(this.rate * this.days * this.workers);
+//   }
+// }
+
+// const bossMax = new Boss({
+//   name: "Max",
+//   surname: "Payne",
+//   rate: 5000,
+//   days: 22,
+//   workers: 3,
+// });
+
+// console.log(bossMax);
+// bossMax.getFullName();
+// bossMax.getSalary();
 
 // 3. Модифицируйте класс Worker из предыдущей задачи следующим образом: сделайте все его свойства приватными, а для их чтения сделайте методы-геттеры.
 
+// class Worker {
+//   #name = "";
+//   #surname = "";
+//   #rate = "";
+//   #days = "";
+
+//   constructor(props) {
+//     this.#name = props.name;
+//     this.#surname = props.surname;
+//     this.#rate = props.rate;
+//     this.#days = props.days;
+//   }
+
+//   get getName() {
+//     console.log(this.#name);
+//   }
+
+//   get getSurName() {
+//     console.log(this.#surname);
+//   }
+
+//   get getRate() {
+//     console.log(this.#rate);
+//   }
+
+//   get getDays() {
+//     console.log(this.#days);
+//   }
+
+//   getSalary() {
+//     console.log(this.#rate * this.#days);
+//   }
+
+//   getFullName() {
+//     console.log(`${this.#name} ${this.#surname}`);
+//   }
+// }
+
+// const workerMikhail = new Worker({
+//   name: "Mikhail",
+//   surname: "Gusev",
+//   rate: 3000,
+//   days: 22,
+// });
+
+// console.log(workerMikhail);
+// workerMikhail.getName;
+// workerMikhail.getSurName;
+// workerMikhail.getRate;
+// workerMikhail.getDays;
+// workerMikhail.getFullName();
+// workerMikhail.getSalary();
+
 // 4. Модифицируйте класс Worker из предыдущей задачи следующим образом: для свойства rate и для свойства days сделайте еще и методы-сеттеры.
+
+// class Worker {
+//   #name = "";
+//   #surname = "";
+//   #rate = "";
+//   #days = "";
+
+//   constructor(props) {
+//     this.#name = props.name;
+//     this.#surname = props.surname;
+//     this.#rate = props.rate;
+//     this.#days = props.days;
+//   }
+
+//   get getName() {
+//     console.log(this.#name);
+//   }
+
+//   get getSurName() {
+//     console.log(this.#surname);
+//   }
+
+//   get getRate() {
+//     console.log(this.#rate);
+//   }
+
+//   set setRate(newRate) {
+//     this.#rate = newRate;
+//   }
+
+//   get getDays() {
+//     console.log(this.#days);
+//   }
+
+//   set setDays(newDays) {
+//     this.#days = newDays;
+//   }
+
+//   getSalary() {
+//     console.log(this.#rate * this.#days);
+//   }
+
+//   getFullName() {
+//     console.log(`${this.#name} ${this.#surname}`);
+//   }
+// }
+
+// const workerMikhail = new Worker({
+//   name: "Mikhail",
+//   surname: "Gusev",
+//   rate: 3000,
+//   days: 22,
+// });
+
+// console.log(workerMikhail);
+// workerMikhail.getName;
+// workerMikhail.getSurName;
+// workerMikhail.setRate = 5000;
+// workerMikhail.setDays = 31;
+// workerMikhail.getFullName();
+// workerMikhail.getSalary();
 
 // 5. Реализуйте класс MyString, который будет иметь следующие методы: метод reverse(), который параметром принимает строку, а возвращает ее в перевернутом виде, метод ucFirst(), который параметром принимает строку, а возвращает эту же строку, сделав ее первую букву заглавной и метод ucWords, который принимает строку и делает заглавной первую букву каждого слова этой строки.
 
