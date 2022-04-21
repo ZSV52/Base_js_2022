@@ -189,33 +189,63 @@
 
 // 5. Реализуйте класс MyString, который будет иметь следующие методы: метод reverse(), который параметром принимает строку, а возвращает ее в перевернутом виде, метод ucFirst(), который параметром принимает строку, а возвращает эту же строку, сделав ее первую букву заглавной и метод ucWords, который принимает строку и делает заглавной первую букву каждого слова этой строки.
 
-class MyString {
-  constructor(props) {
-    this.str = props.str;
-  }
-  reverse() {
-    console.log(this.str.split("").reverse().join(""));
-  }
-  ucFirst() {
-    console.log(this.str[0].toUpperCase() + this.str.slice(1));
-  }
-  ucWords() {
-    const capitalize = (str) => {
-      return str
-        .split(" ")
-        .map((elem) => elem[0].toUpperCase() + elem.slice(1))
-        .join(" ");
-    };
-    console.log(capitalize(this.str));
-  }
-}
+// class MyString {
+//   constructor(props) {
+//     this.str = props.str;
+//   }
+//   reverse() {
+//     console.log(this.str.split("").reverse().join(""));
+//   }
+//   ucFirst() {
+//     console.log(this.str[0].toUpperCase() + this.str.slice(1));
+//   }
+//   ucWords() {
+//     const capitalize = (str) => {
+//       return str
+//         .split(" ")
+//         .map((elem) => elem[0].toUpperCase() + elem.slice(1))
+//         .join(" ");
+//     };
+//     console.log(capitalize(this.str));
+//   }
+// }
 
-const newString = new MyString({ str: "star wars return of the jedi" });
+// const newString = new MyString({ str: "star wars return of the jedi" });
 
-newString.reverse();
-newString.ucFirst();
-newString.ucWords();
+// newString.reverse();
+// newString.ucFirst();
+// newString.ucWords();
 
 // 6. Реализуйте класс Validator, который будет проверять строки. К примеру, у него будет метод isEmail параметром принимает строку и проверяет, является ли она корректным емейлом или нет. Если является - возвращает true, если не является - то false. Кроме того, класс будет иметь следующие методы: метод isDomain для проверки домена, метод isDate для проверки даты и метод isPhone для проверки телефона.
 
 // 7. Реализуйте класс Student (Студент), который будет наследовать от класса User, подобно тому, как это сделано в теоретической части урока. Этот класс должен иметь следующие свойства: name (имя, наследуется от User), surname (фамилия, наследуется от User), year (год поступления в вуз). Класс должен иметь метод getFullName() (наследуется от User), с помощью которого можно вывести одновременно имя и фамилию студента. Также класс должен иметь метод getCourse(), который будет выводить текущий курс студента (от 1 до 5). Курс вычисляется так: нужно от текущего года отнять год поступления в вуз. Текущий год получите самостоятельно.
+
+// const currentYear = new Date().getFullYear();
+// class User {
+//   constructor(props) {
+//     this.name = props.name;
+//     this.surname = props.surname;
+//     this.year = props.year;
+//   }
+//   getFullName() {
+//     console.log(`${this.name} ${this.surname}`);
+//   }
+// }
+
+// class Student extends User {
+//   constructor(props) {
+//     super(props);
+//   }
+//   getCourse() {
+//     console.log(`${currentYear - this.year} course`);
+//   }
+// }
+
+// const newStudent = new Student({
+//   name: "Mikhail",
+//   surname: "Gusev",
+//   year: 2019,
+// });
+
+// newStudent.getFullName();
+// newStudent.getCourse();
