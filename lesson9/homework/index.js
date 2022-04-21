@@ -200,13 +200,13 @@ class MyString {
     console.log(this.str[0].toUpperCase() + this.str.slice(1));
   }
   ucWords() {
-    let myArr = this.str
-      .split(" ")
-      .map(function (elem) {
-        return elem[0].toUpperCase() + elem.slice(1);
-      })
-      .join(" ");
-    console.log(myArr.toString());
+    const capitalize = (str) => {
+      return str
+        .split(" ")
+        .map((elem) => elem[0].toUpperCase() + elem.slice(1))
+        .join(" ");
+    };
+    console.log(capitalize(this.str));
   }
 }
 
