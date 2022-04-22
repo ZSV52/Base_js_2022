@@ -236,7 +236,7 @@
 //   }
 
 //   isDate() {
-//     return /^\d{2}[.-/]\d{2}[.-/]\d{4}$/.test(this.string);
+//     return /^\d{2}[./-]\d{2}[./-]\d{4}$/.test(this.string);
 //   }
 
 //   isPhone() {
@@ -246,7 +246,7 @@
 
 // const myMail = new Validator({ string: "mg88@mail.ru" });
 // const myDomain = new Validator({ string: "mail.ru" });
-// const myDate = new Validator({ string: "04.01.1988" });
+// const myDate = new Validator({ string: "04-01-1988" });
 // const myPhone = new Validator({ string: "+79601740174" });
 
 // console.log(myMail.isEmail());
