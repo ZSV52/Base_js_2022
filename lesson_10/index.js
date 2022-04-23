@@ -53,16 +53,73 @@
 // block1.style.width = "100px";
 
 // Создание элемента
-// document.body.style.margin = "0";
 
-// const header = document.createElement("header");
-// header.className = "page-header";
-// header.style.background = "yellow";
-// header.style.height = "60px";
-// header.style.display = "flex";
-// header.style.justifyContent = "center";
-// header.style.alignItems = "center";
-// header.innerHTML = "Это шапка сайта";
-// document.body.prepend(header);
+// Практика
+document.body.style.margin = "0";
 
-// console.log(header);
+// Header
+const header = document.createElement("header");
+header.className = "page-header";
+header.style.background = "yellow";
+header.style.height = "60px";
+header.style.display = "flex";
+header.style.justifyContent = "center";
+header.style.alignItems = "center";
+header.innerHTML = "Это шапка сайта";
+document.body.prepend(header);
+
+// Section
+const section = document.createElement("section");
+section.className = "page-section";
+section.style.padding = "10px";
+header.after(section);
+
+// Input
+const input = document.createElement("input");
+input.className = "todos-input";
+section.style.marginRight = "10px";
+input.addEventListener("input", (event) => console.log(event.target.value));
+section.prepend(input);
+
+// Button
+const button = document.createElement("button");
+button.className = "todos-button";
+button.innerText = "Add Todo";
+// button.onclick = () => console.log("clicked");
+
+button.addEventListener("click", () => console.log("clicked"));
+// button.addEventListener("click", () => console.log("clicked clicked"));
+// input.after(button);
+
+// Todos-list
+const newUl = document.createElement("ul");
+newUl.className = "todos-list";
+button.after(newUl);
+
+// Todos items
+for (let i = 1; i <= 5; i++) {
+  const newLi = document.createElement("li");
+  newLi.className = "todos-list__item";
+  newLi.innerText = `Пункт ${i}`;
+  newUl.append(newLi);
+}
+
+function handleToDoAdd() {
+  const currentInputValue = input.value;
+  const todoListLength = document.querySelectorAll("li").length;
+  const newLi = document.createElement("li");
+  newLi.className = "todo-list__item";
+  newLi.innerText = `${currentInputValue} ${todoListLength + 1}`;
+  newUl.append(newLi);
+}
+
+// stopPropagation / stopImmediatePropagation
+// event.preventDefault()
+
+const a = document.querySelector("a");
+a.innerText = "ссылка";
+a.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log("clicked");
+});
+console.log(a);
